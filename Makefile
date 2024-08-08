@@ -1,22 +1,21 @@
 CXX=clang++
 CXXFLAGS=-std=c++11 -Wall
-TARGET=build/src/outputExecutable
 SRC_DIR=src
-OBJDIR=build/src
+OBJ_DIR=build
+BIN_DIR=$(OBJ_DIR)/bin
 
 SRC_FILES=$(wildcard $(SRC_DIR)/*.cpp)
-OBJ_FILES=$(patsubst $(SRC_DIR)/%.cpp,$(OBJDIR)/%.o,$(SRC_FILES))
+EXE_FILES=$(patsubst $(SRC_DIR)/%.cpp,$(BIN_DIR)/%,$(SRC_FILES))
 
-# Ensure the output directory exists
-# $(shell mkdir -p build)
-$(shell mkdir -p build $(OBJDIR))
+# Ensure the output directories exist
+$(shell mkdir -p $(OBJ_DIR) $(BIN_DIR))
 
+all: $(EXE_FILES)
 
-$(TARGET): $(OBJ_FILES)
-	$(CXX) $(CXXFLAGS) -o $@ $^
-
-$(OBJDIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@	
+$(BIN_DIR)/%: $(SRC_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
-	rm -f $(OBJ_FILES) $(TARGET)
+	rm -f $(BIN_DIR)/*
+
+.PHONY: all clean

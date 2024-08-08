@@ -8,43 +8,18 @@
       "name": "C Debug (Clang)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/src/outputExecutable", // Path to your compiled executable
-      "args": [],
-      "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb", // Use lldb as the debugger for Clang
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for lldb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "clang with makefile" // Name of the build task to run before debugging
+      "preLaunchTask": "clang with makefile", // Name of the build task to run before debugging
+      "program": "${workspaceRoot}" // not working
     },
     {
       "name": "C Test (Clang)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/src/build/tests/testRunner",
-      "args": [],
-      "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
-      "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "Build Tests"
+      "program": "${workspaceRoot}" // not working
     }
   ]
 }
