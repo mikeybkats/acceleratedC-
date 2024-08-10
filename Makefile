@@ -1,5 +1,5 @@
 CXX=clang++
-CXXFLAGS=-std=c++11 -Wall -I/opt/homebrew/include/
+CXXFLAGS=-std=c++17 -Wall -I/opt/homebrew/include/ -I/opt/homebrew/include/SDL2
 LDFLAGS = -L/opt/homebrew/lib -lSDL2
 SRC_DIR=src
 OBJ_DIR=build
