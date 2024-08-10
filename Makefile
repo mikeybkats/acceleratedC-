@@ -1,5 +1,6 @@
 CXX=clang++
-CXXFLAGS=-std=c++11 -Wall
+CXXFLAGS=-std=c++11 -Wall -I/opt/homebrew/include/
+LDFLAGS = -L/opt/homebrew/lib -lSDL2
 SRC_DIR=src
 OBJ_DIR=build
 BIN_DIR=$(OBJ_DIR)/bin
@@ -13,7 +14,7 @@ $(shell mkdir -p $(OBJ_DIR) $(BIN_DIR))
 all: $(EXE_FILES)
 
 $(BIN_DIR)/%: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
 	rm -f $(BIN_DIR)/*

@@ -36,7 +36,8 @@
     "test_chunk.h": "c",
     "rle.h": "c",
     "test_value.h": "c",
-    "test_rle.h": "c"
+    "test_rle.h": "c",
+    "iostream": "cpp"
   },
   "editor.formatOnSave": true
 }

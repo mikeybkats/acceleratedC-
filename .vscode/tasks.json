@@ -11,7 +11,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "args": ["-I/opt/homebrew/include/SDL2"],
+      "args": ["-I/opt/homebrew/include/"],
       "options": {
         "cwd": "${workspaceFolder}"
       },
