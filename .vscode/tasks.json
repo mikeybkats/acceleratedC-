@@ -7,16 +7,17 @@
       "label": "clang with makefile",
       "type": "shell",
       "command": "make",
+      "args": [
+        "-Wall",
+        "-Wextra",
+        "-std=c++17",
+        "-I/opt/homebrew/include/",
+        "-I/opt/homebrew/include/SDL2"
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "args": [
-        "-std=c++17",
-        "-Wall",
-        "-I/opt/homebrew/include/",
-        "-I/opt/homebrew/include/SDL2"
-      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
