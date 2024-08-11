@@ -38,6 +38,7 @@ int main(int argc, char* args[]) {
       // Hack to get window to stay open
       SDL_Event e;
       bool quit = false;
+
       while (!quit) {
         while (SDL_PollEvent(&e)) {
           if (e.type == SDL_QUIT) {
@@ -45,6 +46,14 @@ int main(int argc, char* args[]) {
           }
         }
       }
+
+      // Destroy window
+      SDL_DestroyWindow(window);
+
+      // Quit SDL subsystems
+      SDL_Quit();
     }
   }
+
+  return 0;
 }
