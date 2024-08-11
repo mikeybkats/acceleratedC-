@@ -11,7 +11,12 @@
         "kind": "build",
         "isDefault": true
       },
-      "args": ["-I/opt/homebrew/include/"],
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-I/opt/homebrew/include/",
+        "-I/opt/homebrew/include/SDL2"
+      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },

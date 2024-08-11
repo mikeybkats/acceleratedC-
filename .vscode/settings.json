@@ -1,7 +1,4 @@
 {
-  "rust-analyzer.linkedProjects": ["./Cargo.toml"],
-  "spellright.language": ["en"],
-  "spellright.documentTypes": ["latex", "plaintext"],
   "files.associations": {
     "stdint.h": "c",
     "stdbool.h": "c",
@@ -39,5 +36,6 @@
     "test_rle.h": "c",
     "iostream": "cpp"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++"
 }
