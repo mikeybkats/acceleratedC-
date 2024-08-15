@@ -37,7 +37,7 @@ void printTriangle(int height, int width) {
       if (c == width / 2 + r || c == width / 2 - r) {
         cout << "*";
       } else {
-        if (r == height / 2 - 1) {
+        if (r == height / 2 - 1 && c > 0) {
           cout << "*";
         } else {
           cout << " ";
@@ -54,7 +54,7 @@ int main() {
 
   printRect(8, 15);
 
-  printTriangle(14, 13);
+  printTriangle(20, 20);
 
   return 0;
 }
