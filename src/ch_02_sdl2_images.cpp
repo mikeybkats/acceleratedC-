@@ -1,6 +1,11 @@
 #include <SDL2/SDL.h>
+#include <stdio.h>
 
-#include <iostream>
+// #include <cstdio>
+// #include <iostream>
+#include <string>
+
+using std::string;
 
 int SCREEN_WIDTH = 640;
 int SCREEN_HEIGHT = 480;
@@ -27,6 +32,9 @@ bool init() {
   // initialize SDL
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+    // string error;
+    // std::cout << "SDL could not initlialize! SLD_Error: " << SDL_GetError()
+    //           << std::endl;
     success = false;
   } else {
     // create window
