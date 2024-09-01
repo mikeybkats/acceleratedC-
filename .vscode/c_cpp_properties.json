@@ -4,7 +4,6 @@
       "name": "MacBookPro C++ Config",
       "includePath": [
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
-        "/Library/Developer/CommandLineTools/usr/include/c++/v1",
         "${workspaceFolder}/src/**",
         "/opt/homebrew/include",
         "/opt/homebrew/include/SDL2"
